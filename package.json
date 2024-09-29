@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeply": "npm run build",
-    "deply": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
 
   },
   "dependencies": {
