@@ -1,0 +1,39 @@
+:root {
+   --white: #fff;
+   --black: #000;
+   --gray-100: #E5E5E5;
+   --gray-200: #7a7a7a;
+   --gray-800: #141414;
+
+   /* --green-300: #00B37E;
+   --red-400: #F75A68; */
+}
+
+*{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+   font-family: "Poppins", sans-serif;
+}
+
+.theme-dark {
+   color: var(--white);
+   background-color: var(--gray-800);
+}
+
+.theme-light {
+   color: var(--black);
+   background-color: var(--white);
+}
+
+.theme-dark-card {
+   color: var(--white);
+   background-color: var(--gray-900);
+}
+
+.theme-light-card {
+   color: var(--black);
+   background-color: var(--gray-100);
+}

@@ -1,0 +1,30 @@
+.container{
+   width: 140px;
+   height: 215px;
+   border-radius: 8px;
+   display: flex;
+   overflow: hidden;
+   flex-direction: column;
+   border: 1px solid blue;
+}
+
+.div_imagem{
+   overflow: hidden;
+}
+
+.imagem{
+   height: 100%;
+   width: auto;
+   object-fit: cover;
+}
+.buttons{
+   display: flex;
+   justify-content: space-between;
+   padding: 5px 10px;
+}
+
+.icon{
+   cursor: pointer;
+   font-size: 24px;
+   color: #e5e5e5;
+}

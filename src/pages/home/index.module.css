@@ -1,0 +1,12 @@
+.container_cards{
+   width: 100%;
+   /* background-color: red; */
+   margin-top: 20px;
+   padding: 0 20px;
+}
+
+.cards{
+   margin-top: 20px;
+   display: flex;
+   gap: 20px;
+}

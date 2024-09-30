@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-style: normal;
+  list-style: none;
+}
+
+/* #region NAVIGATION*/
+/* menu de navegação para mobile */
+.nav{
+  display: flex;
+  height: calc(60px -10px);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+}
+
+/* Oculta o check box default */
+.nav > input{
+  display: none;
+}
+.logo{
+  height: 32px;
+  width: auto;
+}
+
+/* simbolo para abri e fechar o menu */
+.checkbtn i {
+  font-size: 24px;
+  color: var(--gray-300);
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+/* Configuração inicial do menu, escondido */
+.menu{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  color: var(--gray-100);
+  top: 60px;
+  right: 100%;
+  text-align: center;
+  transition: all 0.5s;
+  background: var(--brown-500);
+}
+
+/* Altura de cada item do menu */
+.menu li{
+  line-height: calc((100vh - 60px)/5);
+  font-size: 30px;
+  cursor: pointer;
+}
+.menu li:hover {
+  color: var(--gray-800);
+  background: var(--gray-100);
+  padding-left: -10px;
+  border-radius: 10px;
+}
+/* posição com o menu visivel */
+.menu.visible {
+  left: 0; /* Mover o menu para visível */
+}
+
+.btn{
+  width: 80px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
+  background-color: var(--brown-500);
+  cursor: pointer;
+}
+/* #endregion NAVIGATION*/
+
+@media (min-width: 768px) {
+  body{
+    max-width: 1512px;
+    height: 100%;
+    margin: auto;
+  }
+
+  .logo{
+    height: 80px;
+  }
+  /* #region NAVIGATION*/
+  /* Oculta o boão para mobile */
+  .checkbtn{
+    display: none;
+  }
+  .nav{
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-between;
+    height: 120px;
+  }
+  .btn{
+    width: 165px;
+    height: 55px;
+  }
+   .menu{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 100%;
+    background: transparent;
+    color: var(--black);
+  }
+  .menu li{
+    font-size: 15px;
+    height: 100%;
+    align-items: center;
+  }
+
+  .menu li:hover {
+    color: var(--gray-200);
+    background: transparent;
+    transition: transform 0.3s ease;
+    transform-origin: bottom;
+    transform: scale(1.2); /* 20% */
+  }
+
+  /* #endregion NAVIGATION*/
+
+  /* #region MAIN */
+  .conteudo{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%'';
+  }
+  .banner-div{
+    width: 100%;
+  }
+  .banner-mobile{
+    display: none;
+  }
+
+  .banner{
+    display: inline-block;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  /* #endregion MAIN */
+}
