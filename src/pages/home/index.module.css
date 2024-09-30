@@ -1,3 +1,8 @@
+*{
+   background-color: var(--gray-800);
+   color: var(--gray-100);
+}
+
 .container_cards{
    width: 100%;
    /* background-color: red; */
@@ -9,4 +14,8 @@
    margin-top: 20px;
    display: flex;
    gap: 20px;
+}
+
+.titulo{
+   color: var(--gray-100);
 }

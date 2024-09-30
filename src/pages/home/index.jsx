@@ -36,7 +36,7 @@ export function Home(){
       <div>
          <Menu />
          <div className={styles.container_cards}>
-            <h1>Assistidos</h1>
+            <h1 className={styles.titulo}>Assistidos</h1>
             <div className={styles.cards}>
                {isMobile ? (
                <CardMobile src={img_card_mobile}/>
