@@ -5,7 +5,7 @@
    display: flex;
    overflow: hidden;
    flex-direction: column;
-   border: 1px solid blue;
+   background-color: var(--gray-300);
 }
 
 .div_imagem{
@@ -21,10 +21,12 @@
    display: flex;
    justify-content: space-between;
    padding: 5px 10px;
+   background-color: var(--gray-300);
 }
 
 .icon{
    cursor: pointer;
    font-size: 24px;
    color: #e5e5e5;
+   background-color: var(--gray-300);
 }

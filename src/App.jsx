@@ -36,7 +36,10 @@ export default function App () {
            path: "*",
            element: <NotFound />,
        },
-    ]);
+    ],
+    {
+        basename: "/PB_MyFilmeFlix",  // Define o subdiretório como base
+    });
 
    return (
        <RouterProvider router={router} />
