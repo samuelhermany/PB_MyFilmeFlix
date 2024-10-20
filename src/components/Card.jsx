@@ -9,19 +9,24 @@ import { IoAddCircleOutline } from "react-icons/io5";
 import styles from './Card.module.css';
 import "../global.css"
 
-export function Card({src}){
+import { imageURL } from '../config';
+
+export function Card({movie, showLink = true}) {
    return (
-      <div className={styles.container}>
-         <div className={styles.imagem_div}>
-            <img className={styles.imagem} src={src} alt="" />
-         </div>
-         <div className={styles.buttons}>
-            <div className={styles.buttons_left}>
-               <FaRegStar className={styles.icon}/>
-               <FaRegCircleCheck className={styles.icon}/>
+      < >
+         <Link to={`/details/${movie.id}`} className={styles.container}>
+            <div className={styles.imagem_div}>
+               <img className={styles.imagem} src={imageURL + movie.poster_path} alt={movie.title} />
             </div>
-            <IoAddCircleOutline className={styles.icon}/>
-         </div>
-      </div>
+            <h2 className={styles.titulo}>{movie.title}</h2>
+            <div className={styles.buttons}>
+               <div className={styles.buttons_left}>
+                  <FaRegStar className={styles.icon}/>
+                  <FaRegCircleCheck className={styles.icon}/>
+               </div>
+               <IoAddCircleOutline className={styles.icon}/>
+            </div>
+         </Link>
+      </>
    )
 }

@@ -1,0 +1,58 @@
+.container{
+   position: relative;
+   width: 300px;
+   height: 150px;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: transform 0.3s ease;
+   transform-origin: left bottom;
+}
+
+.container:hover {
+   transform: scale(1.2); /* 20% */
+   z-index: 10;
+ }
+
+.imagem_div{
+   height: 100%;
+   width: auto;
+   overflow: hidden;
+   border-radius: 8px;
+}
+.imagem_div:hover{
+   border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 0px;
+}
+
+.imagem{
+   height: 100%;
+   width: auto;
+   object-fit: cover;
+}
+.buttons{
+   display: flex;
+   justify-content: space-between;
+   padding: 10px;
+   transition: opacity 0.3s ease;
+   border-bottom-left-radius: 8px;
+   border-bottom-right-radius: 8px;
+   background-color: var(--gray-300);
+   opacity: 0; /* Inicialmente os botões ficam invisíveis */
+}
+
+.container:hover .buttons {
+   display: flex;
+   opacity: 1;
+}
+
+.buttons_left{
+   display: flex;
+   gap: 10px;
+   background-color: var(--gray-300);
+}
+
+.icon{
+   font-size: 32px;
+   color: "#e5e5e5";
+   background-color: var(--gray-300);
+}

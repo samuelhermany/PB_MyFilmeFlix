@@ -1,61 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './index.module.css';
 import '../../global.css'
+import { moviesURL, apiKey } from '../../config';
 
 import { Menu } from '../../components/Menu';
-import { CardMobile } from '../../components/CardMobile';
 import { Card } from '../../components/Card';
-import img_card from "../../assets/background_card.png";
-import img_card_mobile from "../../assets/background_card_mobile.png";
 
 export function Home(){
-   const [isMobile, setIsMobile] = useState(false);
+   const [topMovies, setTopMovies] = useState([]);
 
-   // Função para verificar o tamanho da tela
-   const handleResize = () => {
-     if (window.innerWidth <= 768) {
-       setIsMobile(true);
-     } else {
-       setIsMobile(false);
-     }
+   const getTopRatedMovies = async (url) => {
+      const res = await fetch(url);
+      const data = await res.json();
+
+      setTopMovies(data.results);
    };
 
-   // useEffect para monitorar o resize da janela
    useEffect(() => {
-      handleResize(); // Checa o tamanho inicial
-      window.addEventListener('resize', handleResize);
-
-      // Remove o listener quando o componente for desmontado
-      return () => {
-         window.removeEventListener('resize', handleResize);
-      };
+      const topRatedUrl = `${moviesURL}top_rated?${apiKey}`;
+      getTopRatedMovies(topRatedUrl);
    }, []);
 
    return (
       <div>
          <Menu />
          <div className={styles.container_cards}>
-            <h1 className={styles.titulo}>Assistidos</h1>
+            <h1 className={styles.titulo}>Melhores Avaliações</h1>
             <div className={styles.cards}>
-               {isMobile ? (
-               <CardMobile src={img_card_mobile}/>
-                  ) : (
-                  <Card src={img_card}/>
-               )}
-               {isMobile ? (
-               <CardMobile src={img_card_mobile}/>
-                  ) : (
-                  <Card src={img_card}/>
-               )}
+               {topMovies.length === 0 && <p>Carregando...</p>}
+               {topMovies.map((item) => (
+                  <Card key={item.id} movie={item}/>
+               ))}
             </div>
          </div>
-         {/* <Link to={'/'}>Home</Link>
-         <Link to={'/config'}>Configuração</Link>
-         <Link to={'/details'}>Detalhes</Link>
-         <Link to={'/myList'}>Minha Lista</Link>
-         <Link to={'/watched'}>Assistidos</Link> */}
-
       </div>
    )
 }

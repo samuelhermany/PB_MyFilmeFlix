@@ -1,0 +1,66 @@
+.container {
+   position: relative;
+   height: 100%;
+   overflow: hidden; /* Impede que o conteúdo exceda a área visível */
+}
+
+.videoBackground {
+   position: fixed; /* Permite que o vídeo fique atrás do conteúdo */
+   top:70px;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 0;
+   opacity: 0.5;
+}
+
+.videoIframe {
+   width: 100%;
+   height: 100%;
+   pointer-events: none;
+   transition: opacity 0.5s ease;
+   border: none;
+}
+
+.content {
+   width: calc(100%/3);
+   position: relative;
+   z-index: 1;
+   padding: 50px 0 0 50px;
+   background-color: transparent;
+}
+
+.line{
+   background-color: transparent;
+   padding: 10px 0;
+}
+.lineInline{
+   display: flex;
+   gap: 10px;
+   background-color: transparent;
+}
+.icon{
+   font-size: 34px;
+   color: "#e5e5e5";
+   padding-right: 1px;
+   cursor: pointer;
+   background-color: transparent;
+}
+.imgClassificacao{
+   width: 30px;
+   background-color: transparent;
+   margin-bottom: 10px;
+}
+p{
+   background-color: transparent;
+   font-weight: lighter;
+}
+.titulo{
+   font-size: 30px;
+   background-color: transparent;
+}
+.subTitulo{
+   font-size: 16px;
+   font-weight: 400;
+   background-color: transparent;
+}

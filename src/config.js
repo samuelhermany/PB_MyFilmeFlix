@@ -1,0 +1,11 @@
+export const moviesURL = import.meta.env.VITE_API;
+export const apiKey = import.meta.env.VITE_API_KEY;
+export const imageURL = import.meta.env.VITE_IMG_154;
+export const imageURL_92 = import.meta.env.VITE_IMG_92;
+export const imageURL_154 = import.meta.env.VITE_IMG_154;
+export const imageURL_185 = import.meta.env.VITE_IMG_185;
+export const imageURL_342 = import.meta.env.VITE_IMG_342;
+export const imageURL_500 = import.meta.env.VITE_IMG_500;
+export const imageURL_780 = import.meta.env.VITE_IMG_780;
+export const imageURL_1280 = import.meta.env.VITE_IMG_1280;
+export const imageURL_original = import.meta.env.VITE_IMG_original;

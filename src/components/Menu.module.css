@@ -3,9 +3,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", system-ui;
-  font-weight: 500;
   font-style: normal;
   list-style: none;
+  background-color: var(--gray-800);
+  color: var(--gray-100);
 }
 
 /* #region NAVIGATION*/
@@ -85,7 +86,8 @@
   }
 
   .logo{
-    height: 80px;
+    padding-top: 8px;
+    height: 50px;
   }
   /* #region NAVIGATION*/
   /* Oculta o boão para mobile */
@@ -96,7 +98,8 @@
     display: flex;
     padding: 0 30px;
     justify-content: space-between;
-    height: 120px;
+    align-items: center;
+    height: 50px;
   }
   .btn{
     width: 165px;
@@ -118,14 +121,16 @@
     font-size: 15px;
     height: 100%;
     align-items: center;
+    line-height: 80px;
   }
+
 
   .menu li:hover {
     color: var(--gray-200);
     background: transparent;
     transition: transform 0.3s ease;
     transform-origin: bottom;
-    transform: scale(1.2); /* 20% */
+    transform: scale(1.2);
   }
 
   /* #endregion NAVIGATION*/
